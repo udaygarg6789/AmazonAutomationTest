@@ -34,7 +34,7 @@ public class MyStepdefs {
     public void userEntersATextInSearchBox() throws Exception{
         System.out.println("Inside step - user enters a text in search box");
         Search = driver.findElement(By.id("twotabsearchtextbox"));
-        Search.sendKeys("Apple");
+        Search.sendKeys("Orange");
         Thread.sleep(3000);
     }
 
@@ -48,8 +48,8 @@ public class MyStepdefs {
     @Then("user is navigated to search results")
     public void userIsNavigatedToSearchResults() {
         System.out.println("Inside step - user is navigated to search results");
-        Assert.assertEquals(driver.getTitle(), "Amazon.in : Apple");
-        System.out.println("User searched Apple");
+        Assert.assertEquals(driver.getTitle(), "Amazon.in : Orange");
+        System.out.println("User searched Orange");
         driver.quit();
     }
 }
